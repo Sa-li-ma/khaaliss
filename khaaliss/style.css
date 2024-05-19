@@ -1,0 +1,296 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Couleur de fond turquoise pâle */
+    color: #333; /* Couleur du texte principale */
+}
+
+.container {
+    width: 80%; /* Largeur du contenu principal */
+    margin: 0 auto; /* Centrer le contenu */
+}
+
+/* En-tête */
+header {
+    background-color: #40e0d0; /* Couleur de fond turquoise */
+    padding: 20px;
+    transition: background-color 0.3s ease; /* Transition douce de couleur */
+}
+
+header:hover {
+    background-color: #20b2aa; /* Changement de couleur au survol */
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.menu ul li {
+    display: inline-block; /* Utilisation de "inline-block" pour permettre le changement de taille */
+    margin-right: 20px;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: #fff; /* Couleur du texte blanc */
+    font-weight: bold;
+    padding: 10px 20px; /* Ajout de rembourrage pour un aspect de bouton */
+    background-color: #20b2aa; /* Couleur de fond turquoise légèrement plus foncée */
+    border-radius: 5px; /* Coins arrondis */
+    transition: background-color 0.3s ease; /* Transition douce de couleur */
+}
+
+.menu ul li a:hover {
+    background-color: #008b8b; /* Changement de couleur au survol, plus foncée */
+}
+
+/* Contenu principal */
+.contenu {
+    padding: 20px;
+}
+
+/* Pied de page */
+.pied_de_page {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10px; /* Réduction de la hauteur du footer */
+    background-color: #40e0d0; /* Couleur de fond turquoise */
+    padding: 5px; /* Réduction de l'espacement intérieur */
+    text-align: center;
+    color: #fff; /* Couleur du texte blanc */
+    font-size: 14px; /* Taille de texte plus petite */
+}
+
+/* Formulaire */
+.formulaire {
+    margin-bottom: 20px;
+    width: 300px; /* Largeur du formulaire */
+    margin: 0 auto; /* Centrer horizontalement */
+    text-align: center; /* Centrer le contenu */
+}
+
+.formulaire fieldset {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 10px 0; /* Marge autour du fieldset */
+}
+
+.formulaire legend {
+    font-weight: bold;
+    text-align: center; /* Centrer le texte */
+}
+
+.formulaire label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.formulaire input[type="text"],
+.formulaire input[type="email"],
+.formulaire input[type="password"] {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.formulaire button {
+    width: 100%;
+    padding: 10px;
+    background-color: #20b2aa; /* Couleur de fond turquoise */
+    border: none;
+    border-radius: 4px;
+    color: #fff; /* Couleur du texte blanc */
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition douce de couleur */
+}
+
+.formulaire button:hover {
+    background-color: #008b8b; /* Changement de couleur au survol, plus foncée */
+}
+
+/* Bouton */
+.bouton {
+    background-color: #20b2aa; /* Couleur de fond turquoise */
+    color: #fff; /* Couleur du texte blanc */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transition douce de couleur */
+}
+
+.bouton:hover {
+    background-color: #008080; /* Changement de couleur au survol */
+}
+
+.tableau {
+    width: 80%; /* Largeur du tableau */
+    margin: 0 auto; /* Centrer horizontalement */
+    border-collapse: collapse; /* Fusionner les bordures de cellules */
+}
+
+.tableau th,
+.tableau td {
+    border: 1px solid #ddd; /* Bordures de cellules */
+    padding: 8px; /* Espacement interne */
+    text-align: center; /* Centrer le contenu */
+}
+
+.tableau th {
+    background-color: #f2f2f2; /* Couleur de fond pour les en-têtes */
+}
+
+.tableau tr:nth-child(even) {
+    background-color: #f2f2f2; /* Couleur de fond pour les lignes paires */
+}
+
+.tableau tr:hover {
+    background-color: #ddd; /* Couleur de fond au survol */
+}
+
+.logo {
+    font-size: 24px; /* Taille du texte */
+    font-weight: bold; /* Gras */
+    color: #fff; /* Couleur du texte */
+    text-transform: uppercase; /* Mettre en majuscules */
+    padding: 10px 20px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    background-color: #20b2aa; /* Couleur de fond turquoise */
+    transition: background-color 0.3s ease; /* Transition douce de couleur au survol */
+}
+
+.logo:hover {
+    background-color: #008b8b; /* Couleur de fond turquoise foncée au survol */
+}
+
+.texteAccueil {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.texteAccueil p {
+    margin-bottom: 20px;
+}
+
+.texteAccueil .bienvenue {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.texteAccueil .additional {
+    display: none;
+}
+
+.texteAccueil button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.texteAccueil button:hover {
+    background-color: #0056b3;
+}
+
+.textareaa {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    height: 200px; /* Hauteur souhaitée */
+}
+
+.bienvenueAdmin {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.bienvenueAdmin h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.bienvenueAdmin p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.bienvenueAdmin ul {
+    list-style-type: disc;
+    margin: 0 auto 20px;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+}
+
+.bienvenueAdmin ul li {
+    margin-bottom: 10px;
+}
+
+.bienvenueAdmin em {
+    color: #666;
+}
+
+.bienvenueClient{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.bienvenueClient h1 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.bienvenueClient p {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.bienvenueClient ul {
+    list-style-type: disc;
+    margin: 0 auto 20px;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+}
+
+.bienvenueClient ul li {
+    margin-bottom: 10px;
+}
+
+.bienvenueClient em {
+    color: #666;
+}
+
+

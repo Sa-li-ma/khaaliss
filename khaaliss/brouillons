@@ -1,0 +1,132 @@
+     //l'ajout d'un compte engendre le suivi des opérations
+                    $reqt = $connect->prepare("INSERT INTO operation (idClient,idCompte, solde) VALUES (:idClient,idCompte,:solde)");
+                    //Liaison
+                    $reqt->bindParam(":idClient",$idClient);
+                    $reqt->bindParam(":idCompte",$idCompte);
+                    $reqt->bindParam(":solde",$solde);
+                    
+
+                    if($reqt->execute()){
+                        echo "opération créé !";
+                        //********************* */
+                        $_SESSION["idOpération"] = $connect->lastInsertId(); // pour récupérer l'ID inséré
+                        
+
+                    header("location: pageClient.php");
+                        exit();
+                    }
+
+
+
+
+
+
+
+
+
+
+
+                    
+                    public function getNom(){
+    $query = "SELECT * FROM client WHERE id = :id";
+    $stmt = $connect->prepare($query);
+    $stmt->bindParam(':id', $this->id);
+    $stmt->execute();
+    $row = $stmt->fetch(PDO::FETCH_ASSOC);
+    return $row["nom"];
+}
+
+
+
+
+public function getEmail(){
+    $req = "SELECT email FROM client WHERE id = :id";
+    $rqt = $this->connect->prepare($req);
+    $rqt->bindValue(':id', $this->id);
+    $rqt->execute();
+    $resultat = $rqt->fetch(PDO::FETCH_ASSOC);
+    if ($resultat) {
+        return  $resultat['email'];
+    } else {
+        return 0; 
+    }
+
+}
+public function getNumero(){
+    $req = "SELECT numero FROM client WHERE id = :id";
+    $rqt = $this->connect->prepare($req);
+    $rqt->bindValue(':id', $this->id);
+    $rqt->execute();
+    $resultat = $rqt->fetch(PDO::FETCH_ASSOC);
+    var_dump($resultat);
+    if ($resultat) {
+        return $resultat['numero'];
+    } else {
+        return 0; 
+    }
+
+}
+
+public function getPwd(){
+    $req = "SELECT pwd FROM client WHERE id = :id";
+    $rqt = $this->connect->prepare($req);
+    $rqt->bindValue(':id', $this->id);
+    $rqt->execute();
+    $resultat = $rqt->fetch(PDO::FETCH_ASSOC);
+    if ($resultat) {
+        return  $resultat['pwd'];
+    } else {
+        return 0; 
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+//recupérer le solde
+     public function getSolde(){
+        $req = "SELECT solde FROM compte WHERE id = :id";
+        $rqt = $this->connect->prepare($req);
+        $rqt->bindValue(':id', $this->id);
+        $rqt->execute();
+        $resultat = $rqt->fetch(PDO::FETCH_ASSOC);
+        if ($resultat) {
+            return (float) $resultat['solde'];
+        } else {
+            return 0; 
+        }
+
+    }
+
+
+
+
+    echo "solde: ".$compte->getSolde(). "<br> ";
+
+    $compte->depot(5000);
+
+    echo "solde: ".$compte->getSolde(). "<br> ";
+
+    $compte->retrait(1000);
+    echo "solde: ".$compte->getSolde(). "<br> ";
+
+
+
+
+
+    /*//var_dump($moi);
+    //echo "id : ".$moi->getId(). "<br> ";
+    echo "prenom : ".$idCompte. "<br> ";
+    echo "nom : ".$moi->getNom(). "<br> ";
+    echo "email :". $moi->getEmail(). "<br> ";
+    echo "numéro :" .$moi->getNumero(). "<br> ";
+    echo "pwd: ".$moi->getpwd(). "<br> ";*/
